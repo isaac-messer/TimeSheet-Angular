@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DepartmentsService } from 'src/app/services/departments.service';
+import { Department } from 'src/app/interfaces/department';
 
 @Component({
   selector: 'app-departments',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./departments.component.scss']
 })
 export class DepartmentsComponent {
+  departments: Department [];
+  
+  constructor(
+    private departmentsService: DepartmentsService,
+  ) {}
 
-}
+    ngOnInit(): void{
+      this.departments = this.departmentsService.departments;
+    };
+};
