@@ -10,6 +10,7 @@ import { AnalyticsTableComponent } from './components/analytics-table/analytics-
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { TimesheetComponent } from './components/timesheet/timesheet.component';
 import { MaterialModule } from './modules/material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MaterialModule } from './modules/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
